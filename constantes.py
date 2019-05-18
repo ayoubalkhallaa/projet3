@@ -1,4 +1,4 @@
-"""Constantes du jeu de Labyrinthe Donkey Kong"""
+"""Constantes du jeu de Aidez MacGyver à s'exhapper"""
 
 #Paramètres de la fenêtre
 nombre_sprite_cote = 15

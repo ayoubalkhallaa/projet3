@@ -2,11 +2,11 @@
 # -*- coding: Utf-8 -*
 
 """
-Jeu Donkey Kong Labyrinthe
-Jeu dans lequel on doit déplacer DK jusqu'aux bananes à travers un labyrinthe.
+Jeu Aidez MacGyver à s'échapper
+Jeu dans lequel on doit déplacer MacGyver jusqu'a la fin à travers un labyrinthe.
 
 Script Python
-Fichiers : dklabyrinthe.py, classes.py, constantes.py, n1, n2 + images
+Fichiers : dklabyrinthe.py, classes.py, constantes.py, n1, + images
 """
 
 import pygame
@@ -19,9 +19,11 @@ pygame.init()
 
 #Ouverture de la fenêtre Pygame (carré : largeur = hauteur)
 fenetre = pygame.display.set_mode((cote_fenetre, cote_fenetre))
+
 #Icone
 icone = pygame.image.load(image_icone)
 pygame.display.set_icon(icone)
+
 #Titre
 pygame.display.set_caption(titre_fenetre)
 

@@ -1,4 +1,4 @@
-"""Classes du jeu de Labyrinthe Donkey Kong"""
+"""Classes du jeu de Aidez MacGyver à s'exhapper"""
 
 import pygame
 from pygame.locals import * 
