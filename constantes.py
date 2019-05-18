@@ -1,4 +1,4 @@
-"""Constantes du jeu de Aidez MacGyver à s'exhapper"""
+"""Constants of the game Aidez MacGyver à s'exhapper"""
 
 #Paramètres de la fenêtre
 nombre_sprite_cote = 15

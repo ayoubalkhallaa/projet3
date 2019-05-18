@@ -1,19 +1,19 @@
-"""Classes du jeu de Aidez MacGyver à s'exhapper"""
+"""Classes of the game Aidez MacGyver à s'échapper"""
 
 import pygame
 from pygame.locals import * 
 from constantes import *
 
 class Niveau:
-	"""Classe permettant de créer un niveau"""
+	"""Class to create a level"""
 	def __init__(self, fichier):
 		self.fichier = fichier
 		self.structure = 0
 	
 	
 	def generer(self):
-		"""Méthode permettant de générer le niveau en fonction du fichier.
-		On crée une liste générale, contenant une liste par ligne à afficher"""	
+		"""Method for generating the level according to the file.
+		We create a general list, containing a list by line to display"""
 		#On ouvre le fichier
 		with open(self.fichier, "r") as fichier:
 			structure_niveau = []
@@ -33,8 +33,7 @@ class Niveau:
 	
 	
 	def afficher(self, fenetre):
-		"""Méthode permettant d'afficher le niveau en fonction 
-		de la liste de structure renvoyée par generer()"""
+		"""Method for displaying the level according to the structure list returned by generer ()"""
 		#Chargement des images (seule celle d'arrivée contient de la transparence)
 		mur = pygame.image.load(image_mur).convert()
 		depart = pygame.image.load(image_depart).convert()
@@ -62,7 +61,7 @@ class Niveau:
 			
 			
 class Perso:
-	"""Classe permettant de créer un personnage"""
+	"""Class to create a character"""
 	def __init__(self, droite, gauche, haut, bas, niveau):
 		#Sprites du personnage
 		self.droite = pygame.image.load(droite).convert_alpha()
@@ -81,7 +80,7 @@ class Perso:
 	
 	
 	def deplacer(self, direction):
-		"""Methode permettant de déplacer le personnage"""
+		"""Method for moving the character"""
 		
 		#Déplacement vers la droite
 		if direction == 'droite':

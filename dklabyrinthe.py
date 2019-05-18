@@ -2,11 +2,11 @@
 # -*- coding: Utf-8 -*
 
 """
-Jeu Aidez MacGyver à s'échapper
-Jeu dans lequel on doit déplacer MacGyver jusqu'a la fin à travers un labyrinthe.
+The names game is Aidez MacGyver à s'échapper.
+game in which we have to move MacGyver until the end through a labyrinth.
 
 Script Python
-Fichiers : dklabyrinthe.py, classes.py, constantes.py, n1, + images
+fils : dklabyrinthe.py, classes.py, constantes.py, n1, + images
 """
 
 import pygame
