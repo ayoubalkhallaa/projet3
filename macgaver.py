@@ -83,7 +83,7 @@ while continuer:
 		niveau.afficher(fenetre)
 
 		#Création de Donkey Kong
-		dk = Perso("images/dk_droite.png", "images/dk_gauche.png", 
+		mg = Perso("images/dk_droite.png", "images/dk_gauche.png",
 		"images/dk_haut.png", "images/dk_bas.png", niveau)
 
 				
@@ -106,22 +106,22 @@ while continuer:
 				if event.key == K_ESCAPE:
 					continuer_jeu = 0
 					
-				#Touches de déplacement de Donkey Kong
+				# Touches de déplacement de macgaver
 				elif event.key == K_RIGHT:
-					dk.deplacer('droite')
+					mg.deplacer('droite')
 				elif event.key == K_LEFT:
-					dk.deplacer('gauche')
+					mg.deplacer('gauche')
 				elif event.key == K_UP:
-					dk.deplacer('haut')
+					mg.deplacer('haut')
 				elif event.key == K_DOWN:
-					dk.deplacer('bas')			
+					mg.deplacer('bas')
 			
-		#Affichages aux nouvelles positions
+		# Affichages aux nouvelles positions
 		fenetre.blit(fond, (0,0))
 		niveau.afficher(fenetre)
-		fenetre.blit(dk.direction, (dk.x, dk.y)) #dk.direction = l'image dans la bonne direction
+		fenetre.blit(mg.direction, (mg.x, mg.y)) #dk.direction = l'image dans la bonne direction
 		pygame.display.flip()
 
-		#Victoire -> Retour à l'accueil
-		if niveau.structure[dk.case_y][dk.case_x] == 'a':
+		# Victoire -> Retour à l'accueil
+		if niveau.structure[mg.case_y][mg.case_x] == 'a':
 			continuer_jeu = 0
