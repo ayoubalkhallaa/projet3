@@ -42,7 +42,7 @@ class Niveau:
 		# On parcourt la liste du niveau
 		num_ligne = 0
 		for ligne in self.structure:
-			#On parcourt les listes de lignes
+			# On parcourt les listes de lignes
 			num_case = 0
 			for sprite in ligne:
 				# On calcule la position réelle en pixels
@@ -63,19 +63,19 @@ class Niveau:
 class Perso:
 	"""Class to create a character"""
 	def __init__(self, droite, gauche, haut, bas, niveau):
-		#Sprites du personnage
+		# Sprites du personnage
 		self.droite = pygame.image.load(droite).convert_alpha()
 		self.gauche = pygame.image.load(gauche).convert_alpha()
 		self.haut = pygame.image.load(haut).convert_alpha()
 		self.bas = pygame.image.load(bas).convert_alpha()
-		#Position du personnage en cases et en pixels
+		# Position du personnage en cases et en pixels
 		self.case_x = 0
 		self.case_y = 0
 		self.x = 0
 		self.y = 0
-		#Direction par défaut
+		# Direction par défaut
 		self.direction = self.droite
-		#Niveau dans lequel le personnage se trouve 
+		# Niveau dans lequel le personnage se trouve
 		self.niveau = niveau
 	
 	
@@ -88,9 +88,9 @@ class Perso:
 			if self.case_x < (nombre_sprite_cote - 1):
 				# On vérifie que la case de destination n'est pas un mur
 				if self.niveau.structure[self.case_y][self.case_x+1] != 'm':
-					#Déplacement d'une case
+					# Déplacement d'une case
 					self.case_x += 1
-					#Calcul de la position "réelle" en pixel
+					# Calcul de la position "réelle" en pixel
 					self.x = self.case_x * taille_sprite
 			# Image dans la bonne direction
 			self.direction = self.droite
